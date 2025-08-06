@@ -266,6 +266,7 @@
 
   <div id="code-box-wrapper" spellcheck="false"></div>
   <button id="copy-btn" title="Скопировать скрипт">Копировать</button>
+  <button id="youtube-btn" class="glowing-btn" style="margin-top: 20px; width: 100%;">Мой YouTube Канал</button>
 </div>
 
 <script>
@@ -327,6 +328,7 @@
   const searchList = document.getElementById('search-list');
   const codeBox = document.getElementById('code-box-wrapper');
   const copyBtn = document.getElementById('copy-btn');
+  const youtubeBtn = document.getElementById('youtube-btn');
 
   searchInput.addEventListener('click', () => {
     searchList.style.display = searchList.style.display === 'block' ? 'none' : 'block';
@@ -360,6 +362,10 @@
   designBtn.addEventListener('click', () => {
     container.classList.toggle('red');
     circles.forEach(c => c.el.classList.toggle('red'));
+  });
+
+  youtubeBtn.addEventListener('click', () => {
+    window.open('https://youtube.com/@jaba133?si=VPuf9i-SE_s9a5t7', '_blank');
   });
 
   // По умолчанию
